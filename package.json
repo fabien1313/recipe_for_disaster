@@ -1,0 +1,21 @@
+{
+  "name": "recipe_for_disaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabien1313/recipe_for_disaster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabien1313/recipe_for_disaster/issues"
+  },
+  "homepage": "https://github.com/fabien1313/recipe_for_disaster#readme"
+}
