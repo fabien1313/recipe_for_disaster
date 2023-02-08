@@ -2,31 +2,66 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class Recipe extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-User.init(
+Recipe.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      primarykey: true,
+      autoincrement: true,
     },
-    name: {
+    dish_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
+    ingredients: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+    },
+      prep_instructions: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+    },
+    prep_time: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    cook_time: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    cook_instructions: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    calories: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    carbs: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    total_fat: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    protein: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    sodium: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    sugar: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -47,7 +82,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'Recipe',
   }
 );
 
