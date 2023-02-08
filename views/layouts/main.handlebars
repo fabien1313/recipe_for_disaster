@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe for Disaster</title>
+  <link rel="stylesheet" href="/public/css/jass.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="main">
+
+    <header class="text-2xl text-center">
+        <h> Recipe for Disaster </h>
+    </header>
+
+    <div class="grid grid-cols-4">
+        <div class="...">
+            <nav>
+                <ul class="leading-10">
+                    {{#if loggedIn}}
+                    <p id="username"> User </p>
+                    <button id="logout" class="btn-no-style">Logout</button>
+                    <a href="/views/search.handlebars"> All Recipes </a>
+                    <a href="/views/recipebook.handlebars"> Your Recipes </a>
+                    {{else}}
+                    <a href="/views/login.handlebars"> Login </a>
+                    <a href="/views/search.handlebars"> All Recipes </a>
+                    <a href="/views/recipebook.handlebars"> Your Recipes </a>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-span-3">
+            {{{body}}}
+        </div>
+        
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/public/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+
+
