@@ -86,4 +86,4 @@ Recipe.init(
   }
 );
 
-module.exports = User;
+module.exports = Recipe;
