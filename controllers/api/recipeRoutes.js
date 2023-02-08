@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { recipe } = require('../../models');
+const { Recipe } = require('../../models');
 
 // router.get('/', async (res, req) => {
 //     try {
@@ -8,3 +8,4 @@ const { recipe } = require('../../models');
 
 //     }
 // })
+ 
