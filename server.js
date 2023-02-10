@@ -12,10 +12,13 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars')
 
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'))
+
 app.use('/users', userRouter)
 
 app.get('/', (req, res) => {
-  res.render('index', {layout: 'main'})
+  res.render('login', {layout: 'main'})
 })
 
 
@@ -40,8 +43,7 @@ app.listen(PORT, () => {
 // app.use(express.urlencoded({ extended: true }));
 
 
-// app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static('public'))
+
 
 
 
