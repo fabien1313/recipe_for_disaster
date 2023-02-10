@@ -12,7 +12,7 @@ Recipe.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      primarykey: true,
+      primaryKey: true,
       autoincrement: true,
     },
     dish_name: {
