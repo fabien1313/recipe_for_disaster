@@ -6,6 +6,12 @@ const hbs = exphbs.create({})
 const app = express();
 const PORT = process.env.PORT || 3001;
 const userRouter = require('./controllers/api/userRoutes');
+const loginRouter = require('./controllers/loginRoutes');
+const allRecipesRoutes = require('./controllers/allRecipesRoutes');
+const cookbookRoutes = require('./controllers/cookbookRoutes');
+
+
+
 
 
 app.engine('handlebars', hbs.engine);
@@ -16,9 +22,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'))
 
 app.use('/users', userRouter)
+app.use('/login', loginRouter)
+app.use('/allrecipes', allRecipesRoutes)
+app.use('/cookbook', cookbookRoutes)
+
+
 
 app.get('/', (req, res) => {
-  res.render('login', {layout: 'main'})
+  res.render('home', {layout: 'main'})
 })
 
 
