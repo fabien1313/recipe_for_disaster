@@ -1,67 +1,32 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+const { Model, DataTypes } = require('sequelize'); 
+const bcrypt = require('bcrypt'); 
 const sequelize = require('../config/connection');
 
-class Recipe extends Model {
+class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-Recipe.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
-      autoincrement: true,
+      autoIncrement: true,
     },
-    dish_name: {
+    userName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    ingredients: {
-      type: DataTypes.TEXT,
+    email: {
+      type: DataTypes.STRING,
       allowNull: false,
-    },
-      prep_instructions: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-    },
-    prep_time: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    cook_time: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    cook_instructions: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    calories: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    carbs: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    total_fat: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    protein: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    sodium: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    sugar: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,
@@ -73,7 +38,7 @@ Recipe.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
+      async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
@@ -82,8 +47,8 @@ Recipe.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Recipe',
+    modelName: 'User',
   }
 );
 
-module.exports = Recipe;
+module.exports = User;
