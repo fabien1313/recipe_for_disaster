@@ -10,7 +10,14 @@ const loginRouter = require('./controllers/loginRoutes');
 const allRecipesRoutes = require('./controllers/allRecipesRoutes');
 const cookbookRoutes = require('./controllers/cookbookRoutes');
 
+// Set up sessions
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: false,
+};
 
+app.use(session(sess));
 
 
 
