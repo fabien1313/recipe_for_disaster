@@ -20,7 +20,7 @@ const loginFormHandler = async (event) => {
 };
 
 const registerFormHandler = async(event) => {
-  event.preventDefaul();
+  event.preventDefault();
 
   const email = document.querySelector("#email-register").value.trim();
   const password = document.querySelector("#password-register").value.trim();
