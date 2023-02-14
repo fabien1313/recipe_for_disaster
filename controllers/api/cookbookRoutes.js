@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 
 
-router.get('/', (req, res) => {
+router.get('/cookbook', (req, res) => {
     res.render('cookbook', {layout: 'main'})
   })
   

@@ -8,4 +8,5 @@ const { Recipe } = require('../../models');
 
 //     }
 // })
- 
+
+module.exports = router;

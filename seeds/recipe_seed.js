@@ -1,5 +1,10 @@
 const Recipe = require('../models/Recipe.js');
 
+// const seedData = require('./seed.json');
+
+
+
+
 const recipeData =[
     {
         dish_name: 'Bacon and Cheese Egg Bites',
@@ -32,5 +37,8 @@ const recipeData =[
 ]
 
 const seedRecipes = () => Recipe.bulkCreate(recipeData);
+
+// const seedData = () => Recipe.bulkCreate(seed);
+
 
 module.exports = seedRecipes;
