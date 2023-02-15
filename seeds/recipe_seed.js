@@ -17,6 +17,7 @@ const recipeData = [
     protein: 21,
     sodium: 6,
     sugar: 1,
+    image: 'https://kathrynskitchenblog.com/wp-content/uploads/2020/01/BreakfastBaconBites-6-scaled.jpg'
   },
   {
     dish_name: "Sheet Pan Pancakes",
@@ -34,6 +35,7 @@ const recipeData = [
     protein: 5,
     sodium: 5,
     sugar: 1,
+    image: "https://www.thecountrycook.net/wp-content/uploads/2021/08/thumbnail-Sheet-Pan-Pancakes-scaled.jpg"
   },
   {
     dish_name: "New England Clam Chowder",
@@ -48,6 +50,7 @@ const recipeData = [
     protein: 24,
     sodium: 0,
     sugar: 0,
+    image:"https://www.afamilyfeast.com/wp-content/uploads/2013/04/New-England-clam-chowder-3-new.jpg"
   },
   {
     dish_name: "Microwaved Sweet Potatoes",
@@ -62,6 +65,7 @@ const recipeData = [
     protein: 6,
     sodium: 0,
     sugar: 0,
+    image: "https://bakeitwithlove.com/wp-content/uploads/2022/10/microwave-baked-sweet-potatoes-sq.jpg"
   },
   {
     dish_name: "Lemon Pepper Chicken Breasts",
@@ -76,6 +80,7 @@ const recipeData = [
     protein: 55,
     sodium: 0,
     sugar: 0,
+    image: "https://carlsbadcravings.com/wp-content/uploads/2019/03/lemon-pepper-chicken-11.jpg"
   },
   {
     dish_name: "Shrimp and Mushroom Stir-Fry",
@@ -90,6 +95,7 @@ const recipeData = [
     protein: 23,
     sodium: 0,
     sugar:0,
+    image: "https://www.servingdumplings.com/wp-content/uploads/2022/08/shrimp-with-garlic-sauteed-mushrooms-2-4c4d3b41.jpg"
   },
   {
     dish_name: "Spaghetti Aglio e Olio (Pasta with Garlic and Oil)",
@@ -104,6 +110,7 @@ const recipeData = [
     protein: 8,
     sodium: 0,
     sugar: 0,
+    image: "https://www.countrysidecravings.com/wp-content/uploads/2020/06/Spaghetti-Aglio-e-Olio-photo.jpg"
   },
   {
     dish_name: "Air Fryer Salmon",
@@ -118,6 +125,7 @@ const recipeData = [
     protein: 33,
     sodium: 0,
     sugar: 0,
+    image: "https://therecipecritic.com/wp-content/uploads/2020/11/air_fryer_salmon.jpg"
   },
   {
     dish_name: "Grilled Pork Chops",
@@ -132,6 +140,7 @@ const recipeData = [
     protein: 59,
     sodium: 0,
     sugar: 0,
+    image: "https://easybudgetrecipes.com/wp-content/uploads/2021/05/Grilled-Pork-Chops-Recipe.jpg"
   },
   {
     dish_name: "BLT Wraps",
@@ -146,6 +155,7 @@ const recipeData = [
     protein: 44,
     sodium: 0,
     sugar: 0,
+    image: "https://www.thegraciouspantry.com/wp-content/uploads/2022/03/blt-wrap-recipe-v-2-.jpg"
   },
   // {
   //   dish_name: "",
