@@ -26,11 +26,11 @@ const registerFormHandler = async(event) => {
   const password = document.querySelector("#password-register").value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/users/login', {
+    const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
-    });
+    }); console.log(email, password);
 
     if (response.ok) {
       document.location.replace('/');
@@ -42,8 +42,10 @@ const registerFormHandler = async(event) => {
 
 document
   .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('click', loginFormHandler);
 
   document
   .querySelector('#register-form')
-  .addEventListener('submit', registerFormHandler);
+  .addEventListener('click', registerFormHandler);
+
+  

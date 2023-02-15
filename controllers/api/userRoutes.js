@@ -15,11 +15,10 @@ router.get('/')
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      username: req.body.username,
+      // username: req.body.userName,
       email: req.body.email,
       password: req.body.password,
-    });
-    console.log("USER CREATED")
+    }); console.log(dbUserData)
     req.session.save(() => {
       req.session.loggedIn = true;
 
