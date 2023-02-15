@@ -1,5 +1,7 @@
-const seedRecipe = require('./recipe_seed');
 const sequelize = require('../config/connection');
+const seedRecipe = require('./recipe_seed');
+
+
 
 const seedAll = async () => {// Define an asynchronous function to seed the database
     try {
