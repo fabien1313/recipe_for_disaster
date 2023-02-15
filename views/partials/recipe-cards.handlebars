@@ -5,34 +5,30 @@
         alt="lady cooking" />
     </div>
     <div class="col-span-3">
-        <h class="text-xl">{{recipe.name}}</h>
-        <button
-        type="button"
-        class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
-        id="add">
-        Add Recipe
-        </button>
+        <h class="text-xl">{{dish_name}}</h>
         <div>
-            <span class="inline text">cook time: {{recipe.cooktime}}</span>
-            <span class="inline text">serving: {{recipe.serving}}</span>
+            <span class="inline text">cook time: {{dish_name}}</span>
+            <span class="inline text">prep time: {{prep_time}}</span>
         </div>
         <div>
-            <li>{{recipe.ingredients}}</li>
-        </div>
-        <div>
-            <span class="inline text">calories: {{recipe.calories}}</span>
-            <span class="inline text">sodium: {{recipe.sodium}}</span>
-            <span class="inline text">fat: {{recipe.fat}}</span>
-            <span class="inline text">carb: {{recipe.carb}}</span>
-            <span class="inline text">protein: {{recipe.protein}}</span>
+            <span class="inline text">calories: {{calories}}</span>
+            <span class="inline text">sodium: {{sodium}}</span>
+            <span class="inline text">fat: {{total_fat}}</span>
+            <span class="inline text">carb: {{carbs}}</span>
+            <span class="inline text">protein: {{protein}}</span>
+            <span class="inline text">sugar: {{sugar}}</span>
         </div>
         <div>
             Ingredients
-            <li class="inline-block">{{recipe.ingredients}}</li>
+            <li class="inline-block">{{ingredients}}</li>
+        </div>
+        <div>
+            Prep Instructions
+            <li>{{prep_instructions}}</li>
         </div>
         <div>
             Directions
-            <li>{{recipe.directions}}</li>
+            <li>{{cook_instructions}}</li>
         </div>
     </div>
 </div>
