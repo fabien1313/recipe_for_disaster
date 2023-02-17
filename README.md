@@ -16,7 +16,7 @@ First and foremost you begin in the Home Page!
 ![homepage](https://user-images.githubusercontent.com/115516854/219538074-6f6b9557-6345-435b-b7bc-34ec06a72f12.jpg)
 
 
-Then you hed on over to the log-in tab in the top left corner.
+Then you head on over to the log-in tab in the top left corner.
 
 ![homepage2](https://user-images.githubusercontent.com/115516854/219538569-93a9251b-8e80-4c38-b39b-38bec7378f10.jpg)
 
@@ -39,5 +39,5 @@ This is not the end of Recipe for Disaster! We have many more things planned for
 - [@fabien1313](https://github.com/fabien1313)
 - [@MatthewEvWalker](https://github.com/MatthewEvWalker)
 - [@yhnguyen720](https://github.com/yhnguyen720)
-- [@LilianaRosado](https://github.com/LilianaRosado)![loginpage]
+- [@LilianaRosado](https://github.com/LilianaRosado)
 
